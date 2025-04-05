@@ -7,12 +7,13 @@ jQuery(function () {//potentially redundant wrapper, since I have the defer attr
     var $frame = $('#frame');
     var $score = $('#score');
     var $box = $('.box');
+    var $sideNav = $('#sideBar');
 
-    var gridSize = 30//30x30 is best grid size for gameplay
+    var gridSize = 30;//30x30 is best grid size for gameplay
 
     ///////////////////////////////////////////////////////
     //dynamically control all other elemenents
-    var boardSide = 62.5
+    var boardSide = 62.5;
     ///////////////////////////////////////////////
 
 
@@ -34,7 +35,7 @@ jQuery(function () {//potentially redundant wrapper, since I have the defer attr
 
     // Set initial position
     var snakeBody;
-    intializeGame();
+    initializeGame();
 
 
 
@@ -273,12 +274,12 @@ jQuery(function () {//potentially redundant wrapper, since I have the defer attr
 
     function resetGame() {
         killSnake();
-        intializeGame();
+        initializeGame();
         $gameOver.toggleClass('visible', isGameOver);
         $score.text(score);
     }
 
-    function intializeGame() {
+    function initializeGame() {
         directionInput = 'none';
         isPaused = false;
         isGameOver = false;
@@ -288,12 +289,21 @@ jQuery(function () {//potentially redundant wrapper, since I have the defer attr
 
         snakeBody = [$snakeHead];
 
-        intializeBoardAndBoxSize();
-        intializeStartPosition();
+        initializeBoardAndBoxSize();
+        initializeSideNav();
+        initializeStartPosition();
     }
 
-    function intializeBoardAndBoxSize(){
+
+    function initializeSideNav() {
+        $sideNav.css({
+            'width': boardSide + 4.25 + 'vmin'
+        })
+    }
+
+    function initializeBoardAndBoxSize(){
         //75% + two 12.5% borders gives you 100%
+
         $box.css({
             'height': boxSide * .75 + 'vmin',
             'width': boxSide * .75 + 'vmin',
@@ -307,8 +317,8 @@ jQuery(function () {//potentially redundant wrapper, since I have the defer attr
 
         $frame.css({
             'height': boardSide + 'vmin',
-            'width': boardSide + 'vmin',  
-
+            'width': boardSide + 'vmin',
+            'padding': .25 + 'vmin'
         })
 
         $('.title').css({
@@ -317,7 +327,7 @@ jQuery(function () {//potentially redundant wrapper, since I have the defer attr
 
     }
 
-    function intializeStartPosition(){
+    function initializeStartPosition(){
                 
         $snakeHead.css({
             'top': initialTop + 'vmin',

@@ -12,13 +12,17 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <div id="frame">
-        <header id="score">0</header>
+    <div id="sideBar">
+        <button class="border text" >Play</button>
+        <button class="border text" >Scores</button>
+    </div>
+    <div id="frame" class="border">
+        <header id="score" class="text">0</header>
         <div id="board">
             <div id="snakeHead" class="box"></div>
             <div id="food" class="visible box"></div>
-            <header id="pause" class="title hidden">Pause</header>
-            <header id="gameOver" class="title hidden">Play Again?</header>
+            <header id="pause" class="title text hidden">Pause</header>
+            <header id="gameOver" class="title text hidden">Play Again?</header>
         </div>
     </div>
 </body>

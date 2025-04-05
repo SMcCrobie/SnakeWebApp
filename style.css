@@ -20,13 +20,13 @@ body, html {
 
 .box{
     position: absolute;
-    background-color: red;
+    background-color: #5ebfbf;
     border-color: whitesmoke;
     border-style: solid;
 }
 
 #food{
-    background-color: blue;
+    background-color: black;
 }
 
 #board{
@@ -38,21 +38,19 @@ body, html {
 }
 
 #frame{
-    padding: .25vmin;
+    position: absolute;
+}
+
+.border{
     border-width: 2vmin;
     border-radius: 1vmin;
     border-style: solid;
     border-color: black;
-    position: absolute;
     background-color: whitesmoke;
 }
 
 .title{
     font-size: 4vmin;
-    font-weight: 800;
-    font-family: "Kode Mono", monospace;
-    font-optical-sizing: auto;
-    font-style: normal;
     background-color:black;
     padding: 1vmin;
     padding-right: 2vmin;
@@ -64,15 +62,44 @@ body, html {
     text-align: center;
 }
 
-#score{
-    position: absolute;
-    font-size: 4vmin;
-    font-weight: 800;
+.text{
     font-family: "Kode Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
+    font-weight: 800;
+}
+
+#score{
+    position: absolute;
+    font-size: 4vmin;
     top: -7vmin;
     width: 100%;
     text-align: right;
 
+}
+
+
+
+#sideBar {
+    position: absolute;
+    top: 84.5vmin;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:1.25vmin;
+}
+
+button {
+    flex: 1;
+    padding: 1vmin;
+    font-size: 3vmin;
+    height: 100%;
+    margin: 0 0vmin;
+    transition: all .4s ease;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }
