@@ -1,0 +1,78 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color:lightgrey;
+  }
+
+.hidden {
+    display: none;
+}
+  
+
+.visible {
+    display: block; 
+}
+
+.box{
+    position: absolute;
+    background-color: red;
+    border-color: whitesmoke;
+    border-style: solid;
+}
+
+#food{
+    background-color: blue;
+}
+
+#board{
+    position: absolute;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#frame{
+    padding: .25vmin;
+    border-width: 2vmin;
+    border-radius: 1vmin;
+    border-style: solid;
+    border-color: black;
+    position: absolute;
+    background-color: whitesmoke;
+}
+
+.title{
+    font-size: 4vmin;
+    font-weight: 800;
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color:black;
+    padding: 1vmin;
+    padding-right: 2vmin;
+    padding-left: 2vmin;
+    border-radius: .5vmin;
+    position: absolute;
+    color: white;
+    margin: 1vmin;
+    text-align: center;
+}
+
+#score{
+    position: absolute;
+    font-size: 4vmin;
+    font-weight: 800;
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    top: -7vmin;
+    width: 100%;
+    text-align: right;
+
+}
