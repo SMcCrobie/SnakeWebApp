@@ -81,8 +81,8 @@ body, html {
 
 
 #sideBar {
-    position: absolute;
-    top: 84.5vmin;
+    position: relative;
+    top: 39vmin;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
